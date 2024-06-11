@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Weather app</title>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="main">
+      <div class="main__weather-app">
+        <div class="main__search">
+          <input type="text" placeholder="Enter Your Location" id="search-input" required>
+          <button id="search-button"><img src="./img/search.svg" alt="search icon"></button>
+        </div>
+          <div class="main__error">
+            <p>Invalid city name</p>
+          </div>
+          <div class="main__container">
+            <div class="main__hero">
+              <img src="./img/sunny.svg" alt="sunny-weather" id="weather-icon">
+              <h1>16 °C</h1>
+              <h2>Moscow</h>
+            </div>
+            <div class="main__container-card">
+              <div class="main__card-info">
+                <img src="./img/humidity-weather.svg" alt="">
+                <p id="humidity">61%</p>
+                <p>Humidity</p>
+              </div>
+              <div class="main__card-info">
+                <img src="./img/wind.svg" alt="">
+                <p id="wind">10 km/h</p>
+                <p>Wind speed</p>
+              </div>
+          </div>
+          </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
