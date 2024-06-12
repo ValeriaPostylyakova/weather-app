@@ -40,23 +40,21 @@ async function checkWeather(city) {
 
 searchButton.onclick = function() {
   checkWeather(searchInput.value);
-  searchInput.value = '';
-
   if(searchInput.value === '') {
     error.style.display='block';
     container.style.display='none';
   }
+  searchInput.value = '';
 }
 
 searchInput.addEventListener('keydown', (e) => {
   if(e.keyCode === 13) {
     checkWeather(searchInput.value);
+    if(e.target.value === '') {
+      error.style.display='block';
+      container.style.display='none';
+    }
     searchInput.value = '';
-  }
-
-  if(e.target.value === '') {
-    error.style.display='block';
-    container.style.display='none';
   }
 })
 
